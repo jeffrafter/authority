@@ -6,18 +6,18 @@ module NavigationHelpers
       '/'
 
     when /a protected page/
-      '/dashboard'      
+      '/dashboard'
 
-    when /the "\/dashboard" page/
-      '/dashboard'      
+    when /the dashboard/
+      '/dashboard'
 
-    when /the "\/signup" page/
+    when /the signup page/
       '/signup'
 
-    when /the "\/login" page/
+    when /the login page/
       '/login'
     
-    when /the "\/logout" page/
+    when /the logout page/
       '/logout'
     
     when /the forgot password page/

@@ -11,7 +11,7 @@ Feature: Logging in
  
   Scenario: User enters wrong password
     Given a registered user with the email "francine@hullaballoo.com" with password "doughnuts" exists
-    And I am on the "/login" page
+    And I am on the login page
     When I fill in "email" with "francine@hullaballoo.com"
     And I fill in "password" with "ticklemeelmo"
     And I press "Sign in"
@@ -21,7 +21,7 @@ Feature: Logging in
  
   Scenario: User is registered and enters correct password
     Given a registered user with the email "francine@hullaballoo.com" with password "doughnuts" exists
-    And I am on the "/login" page
+    And I am on the login page
     When I fill in "email" with "francine@hullaballoo.com"
     And I fill in "password" with "doughnuts"
     And I press "Sign in"
@@ -32,10 +32,10 @@ Feature: Logging in
     
   Scenario: User is confirmed and enters correct password
     Given a confirmed user with the email "francine@hullaballoo.com" with password "doughnuts" exists
-    And I am on the "/login" page
+    And I am on the login page
     When I fill in "email" with "francine@hullaballoo.com"
     And I fill in "password" with "doughnuts"
     And I press "Sign in"
-    Then I should be on the "/dashboard" page
+    Then I should be on the dashboard
     And I should see "Signed in successfully"    
     And I should be signed in

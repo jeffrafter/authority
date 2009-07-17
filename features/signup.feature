@@ -5,7 +5,7 @@ Feature: Signing up
    
   Scenario: Email is not unique 
     Given a registered user with the email "francine@hullaballoo.com" with password "doughnuts" exists
-    And I am on the "/signup" page
+    And I am on the signup page
     When I fill in "Email" with "francine@hullaballoo.com"
     And I fill in "Password" with "ticklemeelmo"
     And I fill in "Verify password" with "ticklemeelmo"
@@ -15,7 +15,7 @@ Feature: Signing up
     And I should not be signed in
 
   Scenario: Password is not valid 
-    Given I am on the "/signup" page
+    Given I am on the signup page
     When I fill in "Email" with "francine@yoyoma.com"
     And I fill in "Password" with "ticklemeelmo"
     And I fill in "Verify password" with "doughnuts"
@@ -26,7 +26,7 @@ Feature: Signing up
     And I should not be signed in
 
   Scenario: Email is unique and password is valid    
-    Given I am on the "/signup" page
+    Given I am on the signup page
     When I fill in "Email" with "francine@yoyoma.com"
     And I fill in "Password" with "ticklemeelmo"
     And I fill in "Verify password" with "ticklemeelmo"
