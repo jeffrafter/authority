@@ -1,0 +1,25 @@
+== Authority
+
+  You are making an application that uses authlogic. You don't want to start
+  from scratch.
+
+== Getting started
+
+First, don't share secrets.
+
+  rake secret   
+
+Copy this into config/initializers/session_store.rb
+
+Next, update the email and host in config/environment.rb. You can move these
+to their own initializer or make them environment specific if you want. Then
+setup your database:
+
+  cp config/database.yml.example config/database.yml
+  rake db:migrate
+  
+Run the tests:
+
+  rake 
+  rake features
+  

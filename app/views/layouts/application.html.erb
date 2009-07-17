@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title><%= @title || "Authority" -%></title>
+    <%= stylesheet_link_tag 'scaffold' %>
+  </head>
+  <body>  
+    <div id="header">
+    </div>
+    <div id="frame">
+      <div id="inset" class="center">
+        <div id="content">
+          <h1>Welcome to Authority</h1>
+          <div id="notice"><%= [flash[:notice], flash[:error], flash[:failure], flash[:success]].compact.join(" ") %></div>  
+          <%= yield %>      
+        </div>  
+        <div id="pointer"></div>
+        <div id="sidebar">
+          <div id="statistics">
+          </div>
+          <div id="map">          
+          </div>
+        </div>
+        <div id="footer">
+          <div id="banner">
+            <div>AUTHORITY. &copy; 2009 Jeff Rafter. All Rights Reserved</div>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </div>
+          <div class="left corner"></div>        
+          <div class="right corner"></div>                  
+        </div>
+      </div>  
+    </div>  
+  </body>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<%= form.error_messages %>
+
+<div class="text_field">
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+</div>
+<div class="text_field">
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+</div>
+<div class="text_field">
+  <%= form.label :organization %>
+  <%= form.text_field :organization %>
+</div>
+<div class="text_field">
+  <%= form.label :phone %>
+  <%= form.text_field :phone %>
+</div>
+<div class="text_field">
+  <%= form.label :location %>
+  <%= form.text_field :location %>
+</div>
+<div class="text_field">
+  <%= form.label :website %>
+  <%= form.text_field :website %>
+</div>
+<br />
+<div class="text_field">
+  <%= form.label :timezone %>
+  <%= form.text_field :timezone %>
+</div>
+<div class="text_field">
+  <%= form.label :locale %>
+  <%= form.text_field :locale %>
+</div>
+<br/>
+<% unless @user.new_record? %>
+  <p>Only fill in thes fields if you would like to modify your password:</p>
+<% end %>
+<div class="password_field">
+  <%= form.label :password %>
+  <%= form.password_field :password %>
+</div>
+<div class="password_field">
+  <%= form.label :password_confirmation, "Verify password" %>
+  <%= form.password_field :password_confirmation %>
+</div>
